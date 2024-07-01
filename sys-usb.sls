@@ -4,6 +4,16 @@ sys-usb--update-qube:
    - netvm: proxy
 
 
-sys-usb--detach-usb-devices:
+sys-usb--detach-usb-devices-1:
   cmd.run:
-    - name: sudo qvm-pci detach --persistent --option permissive=true sys-usb dom0:00_0d.0 dom0:00_0d.2 dom0:00_14.0
+    - name: sudo qvm-pci detach --persistent --option permissive=true --option no-strict-reset=true sys-usb dom0:00_0d.0 
+    
+    
+sys-usb--detach-usb-device-2:
+  cmd.run:
+    - name: sudo qvm-pci detach --persistent --option permissive=true --option no-strict-reset=true sys-usb dom0:00_0d.2
+    
+    
+sys-usb--detach-usb-devices-3:
+  cmd.run:
+    - name: sudo qvm-pci detach --persistent --option permissive=true --option no-strict-reset=true sys-usb dom0:00_14.0
