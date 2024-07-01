@@ -4,13 +4,13 @@ citrix--create-qube:
   qvm.vm:
     - name: citrix
     - present:
-      - template: debian-11-minimal
+      - template: admin
       - label: blue
     - features:
       - set:
         - menu-items: firefox-esr.desktop selfservice.desktop thunar.desktop
 
-{% elif grains['id'] == 'citrix' %}
+{% elif grains['id'] == 'admin' %}
 
 citrix--add-firewall:
   file.managed:
