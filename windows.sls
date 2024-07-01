@@ -11,7 +11,7 @@ windows:
       -stubdom
     - prefs:
       - label: orange
-      - netvm: sys-firewall
+      - netvm: sys-firewall-wifi
 # Ensuring that no default_dispvm is set prevents a security warning in the Qube Manager (as well as accidental network access via disposable VMs).
       - standalone:
       - autostart: true
