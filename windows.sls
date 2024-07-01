@@ -8,7 +8,7 @@ windows:
       - maxmem: 12000
       - qmemman: 1
       - qrexec_timeout: 7800
-      -stubdom
+      - stubdom
     - prefs:
       - label: orange
       - netvm: sys-firewall-wifi

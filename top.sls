@@ -16,13 +16,14 @@
 
 user:
   dom0:
-    - windows
     - vault
     - template
-    - sys-vpn
+    - sys-usb
+    - sys-net
     - sys-firewall
     - sys-net-usb
     - sys-firewall-wifi
+    - windows
   dom0 or admin:
     - messaging
     - citrix

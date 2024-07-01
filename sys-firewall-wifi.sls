@@ -1,5 +1,5 @@
 sys-firewall-wifi:
   qvm.clone:
     - source: sys-firewall
-    prefs:
+    - prefs:
       - netvm: sys-net-usb
