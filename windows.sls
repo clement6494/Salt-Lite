@@ -9,6 +9,8 @@ windows:
       - qmemman: 1
       - qrexec_timeout: 7800
       - stubdom
+    - flags:
+      - HVM
     - prefs:
       - label: orange
       - netvm: sys-firewall-wifi
