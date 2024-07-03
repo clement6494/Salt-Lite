@@ -1,6 +1,8 @@
-Documentation, pour la mise en place de postes hybrides :
+# Documentation, pour la mise en place de postes hybrides :
 
-Qubes Lite v0.1
+# Qubes Lite v0.1
+
+## Description
 
 Ce Document à pour but de mettre en place un poste a distance sous Qubes OS, en expliquer les fonctionnalités et la bonne utilisation et les intérêts, y seront abordés à la fin les points d’amélioration possible.
 
@@ -13,24 +15,24 @@ Ce Document à pour but de mettre en place un poste a distance sous Qubes OS, en
 
 
 
-Table des matières
+# Table des matières
     Qubes Lite v0.1	1
-	    Installation Qubes OS	3
-	    Utilisation	7
-            Dom0	7
-            Vm disposables	7
-            Transfert de fichiers et copier/coller	7
-	    Mise en place	8
-            Projet	8
-            Création des VMs et politiques	9
-            Installation Windows	9
-            Installation Citrix Workspace	9
+  - [Installation Qubes OS](#installation-qubes-os)
+    - [Utilisation](#utilisation)
+    - [Dom0](#dom0)
+    - [Vm disposables](#vm-disposables)
+    - [Transfert de fichiers et copier/coller](#transfert-de-fichiers-et-copier/coller)
+  - [Mise en place](#mise-en-place)
+    - [Projet](#projet)
+    - [Création des VMs et politiques](#création-des-vms-et-politiques)
+    - [Installation Windows](#installation-windows)
+    - [Installation Citrix Workspace](#installation-citrix-workspace)
 
 
 
 
 
-	Installation Qubes OS
+# Installation Qubes OS
 
 Ce guide présuppose que vous utilisez un Dell Latitude 5440 ou similaire, et ne résoudra donc que les problèmes qui lui incombent. Ci-dessous un lien listant de manière quasi exhaustive la compatibilité du matériel « récent » avec Qubes OS : qubes-os.org
 Pour l’installation, dans le BIOS de l’ordinateur il faut sélectionner l’ISO de Qubes comme source de BOOT prioritaire. Par ailleurs il faut enlever la technologie de gestion du disque dur par défaut de Dell et choisir celle standard (Storage> AHCI/NVMe et non ‘Raid on’ ou ‘disable’). Vous pouvez aussi vérifier que la virtualisation est activée mais normalement elle l’est déjà par défaut. Un message d’erreur sera affiché plus tard si ce n’est pas le cas et l’installation sera impossible.
@@ -47,7 +49,9 @@ Il faudra ensuite redémarrer le système.
  
 Cet écran indique qu’il faut entrer le mot de passe disque créer précédemment.
 On peut ensuite procéder au setup de notre machine.
- 
+
+
+ Note :![Image1](https://github.com/clement6494/Salt-Lite/assets/94296944/ec29d3d4-a828-41af-bfd4-1647dc032399)
  
 Dans les Template garder Fedora en Template par défaut, Whonix peut être décoché il n’est pas utile, c’est une distro linux servant a naviguer anonymement sur internet. Il pourra être installé plus tard de toute façon si besoin comme de nombreuse autres distro de linux.
 Dans configuration principale, il est intéressant de cocher accepter automatiquement les souris, mais pas les claviers. Ces options afficheront un message à chaque fois qu’un périphérique concerné sera branché à la machine. Le PC possédant déjà un clavier il est inutile dans accepter d’autres.
@@ -69,7 +73,7 @@ Elles peuvent aussi être utiliser pour ouvrir des liens suspects.
 Pour copier-coller du texte d’une VM à l’autre, il suffit de copier traditionnellement (Ctrl+C) le texte, puis le copier dans le presse papier Qubes (Ctrl+Shift+C par default) en étant toujours su la VM d’où on à copier le texte.
 	Si plusieurs texte on été copiés sur plusieurs VMs, Ctrl+Shift+C va copier le texte de la VM sélectionné.
 Ensuite sélectionner la VM où transférer le texte (Ctrl+Shift+V par défaut) pour transférer le texte dans le presse papier de la VM, et ensuite coller le texte ( Ctrl+V)
-Note :
+
 - Sélectionner le texte
 - Ctrl+C
 - Ctrl+Shift+C
