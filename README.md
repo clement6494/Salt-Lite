@@ -57,19 +57,19 @@ Dans les Template garder Fedora en Template par défaut, Whonix peut être déco
 Dans configuration principale, il est intéressant de cocher accepter automatiquement les souris, mais pas les claviers. Ces options afficheront un message à chaque fois qu’un périphérique concerné sera branché à la machine. Le PC possédant déjà un clavier il est inutile dans accepter d’autres.
 On peu aussi décocher le fait de créer une station de travail Whonix, nous n’en auront pas le besoin.
 Voilà c’est fini votre système est prêt à être installé.
-	Utilisation
+## Utilisation
 
 Le but de cette section est de comprendre le fonctionnement de Qubes OS et les précaution de sécurité à respecter.
-	Dom0 
+## Dom0 
 
 Dom0 est la vm d’administration de la machine Qubes OS, ne jamais travailler avec, ou l’utiliser pour stocker des fichiers, elle sert juste à créer des vms ou les modifier.
 
-	Vm disposables
+## Vm disposables
 
 Les Vms disposables sont des vm qui seront supprimés lorsqu’elles seront éteintes, utiles pour ouvrir des fichiers suspects, ne surtout pas stocker de documents dessus au risque de les perdre à jamais.
 Elles peuvent aussi être utiliser pour ouvrir des liens suspects.
 
-	Transfert de fichiers et copier/coller
+## Transfert de fichiers et copier/coller
 Pour copier-coller du texte d’une VM à l’autre, il suffit de copier traditionnellement (Ctrl+C) le texte, puis le copier dans le presse papier Qubes (Ctrl+Shift+C par default) en étant toujours su la VM d’où on à copier le texte.
 	Si plusieurs texte on été copiés sur plusieurs VMs, Ctrl+Shift+C va copier le texte de la VM sélectionné.
 Ensuite sélectionner la VM où transférer le texte (Ctrl+Shift+V par défaut) pour transférer le texte dans le presse papier de la VM, et ensuite coller le texte ( Ctrl+V)
@@ -88,16 +88,16 @@ Le fichier apparaîtra dans la VM de destination à l’emplacement : ~/QubesInc
 
 
 
-	Mise en place
+# Mise en place
 
-	Projet
+## Projet
 
 
  
 Schéma de l’architecture Qubes à mettre en place
 
-	Création des VMs et politiques
-	Création environnement utilisateur
+## Création des VMs et politiques
+### Création environnement utilisateur
 Salt est un logiciel de management qui permets d’automatiser tout un tas d’action sur la machine, nous allons l’utiliser pour créer les différents VMs. Il est recommandé de mettre les fichiers Salt dans un répertoire utilisateur et non Salt par défaut, pour éviter que certains soit écrasés lors de mise à jour système.
 Qubes OS ne présente pas de dossier Salt utilisateur par default, il faut donc en créer un : 
 Exécuter dans Dom0 : qubesctl state.sls user-dir
@@ -117,12 +117,12 @@ Exécuter dans Dom0 : sudo qubesctl state.highstate
 
 
 
-	Installation Windows
+## Installation Windows
 Récupérer depuis la VM Personal, l’iso de Windows 10 : Windows 10 ISO
 Dans le menu en haut à gauche dans VMs cliqué sur Windows puis Settings/Paramètres.
 
 
-	Installation Citrix Workspace
+## Installation Citrix Workspace
 
 Récupérer Citrix Workspace 2203 depuis le site officiel et l’installer manuellement en suivant les instructions. Attention les versions plus récentes de Citrix Workspace ne sont pas compatibles avec les veilles applications de l’aphp.
 citrix-workspace-app-for-linux
