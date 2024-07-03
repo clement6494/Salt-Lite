@@ -6,9 +6,9 @@
 
 Ce Document à pour but de mettre en place un poste a distance sous Qubes OS, en expliquer les fonctionnalités et la bonne utilisation et les intérêts, y seront abordés à la fin les points d’amélioration possible.
 
-	Qubes OS est un environnement se reposant sur la technologie de l’hyperviseur Xen, pour générer et gérer de multiples VMs qui seront cloisonné au niveau du noyau, se rapprochant ainsi de l’utilisation de plusieurs machines physique afin d’isoler les applications critiques, et de permettre des restaurations rapides.
+Qubes OS est un environnement se reposant sur la technologie de l’hyperviseur Xen, pour générer et gérer de multiples VMs qui seront cloisonné au niveau du noyau, se rapprochant ainsi de l’utilisation de plusieurs machines physique afin d’isoler les applications critiques, et de permettre des restaurations rapides.
 
-	Ce guide a pour but de mettre en place une architecture simple de Qubes OS, permettant à l’utilisateur de disposer d’une machine admin (utilisation des application de travail ; Citrix) et d’une machine de bureatique ( réalisation de tâches annexes ; emails , word … )
+Ce guide a pour but de mettre en place une architecture simple de Qubes OS, permettant à l’utilisateur de disposer d’une machine admin (utilisation des application de travail ; Citrix) et d’une machine de bureatique ( réalisation de tâches annexes ; emails , word … )
 
 
 
@@ -102,16 +102,20 @@ Salt est un logiciel de management qui permets d’automatiser tout un tas d’a
 Qubes OS ne présente pas de dossier Salt utilisateur par default, il faut donc en créer un : 
 Exécuter dans Dom0 : qubesctl state.sls user-dir
  		
-		Récupérer le dossier de config Salt : sur clé USB où sur GitHub depuis la VM personal pour ensuite le transférer  dans Dom0 :  cliquez ici pour savoir comment faire.
-Lien GitHub vers le dossier : repo de Salt-Lite
-Lien GitHub vers le dossier de packages RPM : Salt-config rpm
-			
-Déplacer le dossier Salt-personal dans /srv/user-salt/ :
-Exécuter dans Dom0 : mv [emplacement du dossier]/*   /srv/user-salt/
-		
-		Lancer l’exécution des fichiers :
-Exécuter dans Dom0 : sudo qubesctl state.highstate
+Récupérer le dossier de config Salt : sur clé USB où sur GitHub depuis la VM personal pour ensuite le transférer  dans Dom0 :  cliquez ici pour savoir comment faire.
 
+			
+Déplacer le dossier Salt-personal dans dom0 a l'addresse:
+
+	/srv/user-salt/
+Exécuter dans Dom0 :
+
+	mv [emplacement du dossier]/*   /srv/user-salt/
+		
+Lancer l’exécution des fichiers :
+Exécuter dans Dom0 : 
+
+	sudo qubesctl state.highstate	
 
 
 
