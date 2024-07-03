@@ -64,8 +64,8 @@ Une fois la session ouverte si vous utilisez un Dell latitude 5440, sys-net n'ar
 
 dans la console de dom0 (accessible dans le menu en faisant clic droit sur le bureau):
 
-  [Dom0] $ sudo qvm-pci detach sys-net dom0:00_1f.6
-  [Dom0] $ sudo qvm-pci attach --persistent --option permissive=true --option no-strict-reset=true sys-net dom0:00_1f.6
+ 	$ sudo qvm-pci detach sys-net dom0:00_1f.6
+	$ sudo qvm-pci attach --persistent --option permissive=true --option no-strict-reset=true sys-net dom0:00_1f.6
 
 
 # Utilisation
