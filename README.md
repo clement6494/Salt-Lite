@@ -18,7 +18,8 @@ Ce guide a pour but de mettre en place une architecture simple de Qubes OS, perm
 # Table des matières
     Qubes Lite v0.1	1
   - [Installation Qubes OS](#installation-qubes-os)
-    - [Utilisation](#utilisation)
+    - [Connexion Internet](#connexion-internet)
+  - [Utilisation](#utilisation)
     - [Dom0](#dom0)
     - [Vm disposables](#vm-disposables)
     - [Transfert de fichiers et copier/coller](#transfert-de-fichiers-et-copier/coller)
@@ -57,7 +58,17 @@ Dans les Template garder Fedora en Template par défaut, Whonix peut être déco
 Dans configuration principale, il est intéressant de cocher accepter automatiquement les souris, mais pas les claviers. Ces options afficheront un message à chaque fois qu’un périphérique concerné sera branché à la machine. Le PC possédant déjà un clavier il est inutile dans accepter d’autres.
 On peu aussi décocher le fait de créer une station de travail Whonix, nous n’en auront pas le besoin.
 Voilà c’est fini votre système est prêt à être installé.
-## Utilisation
+
+## connexion internet
+Une fois la session ouverte si vous utilisez un Dell latitude 5440, sys-net n'arrivera pas à démarrer a cause d'un problème d'accès au module PCI 00_1f.6 (module gérant la prise ethernet)
+
+dans la console de dom0 (accessible dans le menu en faisant clic droit sur le bureau):
+
+  [Dom0] $ sudo qvm-pci detach sys-net dom0:00_1f.6
+  [Dom0] $ sudo qvm-pci attach --persistent --option permissive=true --option no-strict-reset=true sys-net dom0:00_1f.6
+
+
+# Utilisation
 
 Le but de cette section est de comprendre le fonctionnement de Qubes OS et les précaution de sécurité à respecter.
 ## Dom0 
