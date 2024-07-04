@@ -98,6 +98,12 @@ Ensuite sélectionner la VM où transférer le texte (Ctrl+Shift+V par défaut) 
 Ensuite il faut simplement sélectionner le Qubes souhaité.
 Le fichier apparaîtra dans la VM de destination à l’emplacement : ~/QubesIncoming/[NomDuFichier]
 
+## attacher des périphériques à une vm
+
+selectionner le périphérique choisi et la vm voule et cliquer sur le "plus"
+il faudra répéter cette opération à chaque démarrage du qube.
+![atach webcam](https://github.com/clement6494/Salt-Lite/assets/94296944/cdac389f-f4c5-4c96-b2f8-1ec985fd879a)
+
 
 
 # Mise en place
