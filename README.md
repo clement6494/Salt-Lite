@@ -103,6 +103,7 @@ Le fichier apparaîtra dans la VM de destination à l’emplacement : ~/QubesInc
 
 ## Projet
 
+![qubes setup lite v0 1](https://github.com/clement6494/Salt-Lite/assets/94296944/09d960c9-8bcc-4851-820c-caa71b037cd3)
 
  
 Schéma de l’architecture Qubes à mettre en place
