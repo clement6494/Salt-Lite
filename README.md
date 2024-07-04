@@ -114,7 +114,7 @@ Salt est un logiciel de management qui permets d’automatiser tout un tas d’a
 Qubes OS ne présente pas de dossier Salt utilisateur par default, il faut donc en créer un : 
 Exécuter dans Dom0 : qubesctl state.sls user-dir
  		
-Récupérer le dossier de config Salt : sur clé USB où sur GitHub depuis la VM personal pour ensuite le transférer  dans Dom0 :  cliquez ici pour savoir comment faire.
+Récupérer le dossier de config Salt : sur clé USB où sur GitHub depuis la VM personal pour ensuite [le transférer  dans Dom0](#transfert-de-fichiers-et-copier/coller) : 
 
 			
 Déplacer le dossier Salt-personal dans dom0 a l'addresse:
