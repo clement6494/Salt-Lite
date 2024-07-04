@@ -134,7 +134,14 @@ Exécuter dans Dom0 :
 
 ## Installation Windows
 Récupérer depuis la VM Personal, l’iso de Windows 10 : Windows 10 ISO
-Dans le menu en haut à gauche dans VMs cliqué sur Windows puis Settings/Paramètres.
+Dans le menu en haut à gauche dans VMs cliquez sur Windows puis Settings/Paramètres > avancé .
+
+dans la fenêtre Kernel, choisir (provided by qube)(current)
+
+
+au niveau de la fenêtre autre sélectionner Boot qube depuis un CD-ROM > depuis fichier dans un qube > personal (vm ou est dl l'ISO) 
+selectionner l'ISO et cliquez sur OK.
+
 
 
 ## Installation Citrix Workspace
