@@ -142,7 +142,7 @@ Il faudra choisir un vm connecter a ce réseau avec firefox pour s'identifier au
 
 
 ## Installation Windows
-Récupérer depuis la VM Personal, l’iso de Windows 10 : Windows 10 ISO
+Récupérer depuis la VM Personal, l’iso de Windows 10 : Windows 10 ISO https://www.microsoft.com/fr-fr/software-download/windows10ISO
 Dans le menu en haut à gauche dans VMs cliquez sur Windows puis Settings/Paramètres > avancé .
 
 dans la fenêtre Kernel, choisir (provided by qube)(current)
@@ -167,7 +167,7 @@ Cela va créer des VMs qui seront supprimé à chaque fois quelles seront étein
 Récupérer Citrix Workspace 2203 depuis le site officiel et l’installer manuellement en suivant les instructions. Attention les versions plus récentes de Citrix Workspace ne sont pas compatibles avec les veilles applications de l’aphp.
 citrix-workspace-app-for-linux
 
-
+https://www.citrix.com/downloads/workspace-app/legacy-workspace-app-for-linux/workspace-app-for-linux-2203.html
 
 
 
