@@ -142,6 +142,11 @@ Dans le menu en haut à gauche dans VMs cliqué sur Windows puis Settings/Param�
 Récupérer Citrix Workspace 2203 depuis le site officiel et l’installer manuellement en suivant les instructions. Attention les versions plus récentes de Citrix Workspace ne sont pas compatibles avec les veilles applications de l’aphp.
 citrix-workspace-app-for-linux
 
+Ensuite, dans le terminal de dom0:
+
+  $  sudo qubesctl state.sls citrix saltenv=user
+
+Cela va créer des VMs qui seront supprimé à chaque fois quelles seront éteintes et basé sur la vm windows avec citrix qui vient d'être créer.
 
 
 
