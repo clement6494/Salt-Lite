@@ -142,6 +142,7 @@ dans la fenêtre Kernel, choisir (provided by qube)(current)
 au niveau de la fenêtre autre sélectionner Boot qube depuis un CD-ROM > depuis fichier dans un qube > personal (vm ou est dl l'ISO) 
 selectionner l'ISO et cliquez sur OK.
 
+![windows pram](https://github.com/clement6494/Salt-Lite/assets/94296944/367595c6-a7cc-4c40-9520-fe85645e4dac)
 
 
 ## Installation Citrix Workspace
