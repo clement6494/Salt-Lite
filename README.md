@@ -145,17 +145,19 @@ selectionner l'ISO et cliquez sur OK.
 
 ![windows pram](https://github.com/clement6494/Salt-Lite/assets/94296944/367595c6-a7cc-4c40-9520-fe85645e4dac)
 
+Ensuite, dans le terminal de dom0:
+
+  	$  sudo qubesctl state.sls citrix saltenv=user
+
+Cela va créer des VMs qui seront supprimé à chaque fois quelles seront éteintes et basé sur la vm windows avec ses programmes déjà installés qui vient d'être créer.
+
 
 ## Installation Citrix Workspace
 
 Récupérer Citrix Workspace 2203 depuis le site officiel et l’installer manuellement en suivant les instructions. Attention les versions plus récentes de Citrix Workspace ne sont pas compatibles avec les veilles applications de l’aphp.
 citrix-workspace-app-for-linux
 
-Ensuite, dans le terminal de dom0:
 
-  $  sudo qubesctl state.sls citrix saltenv=user
-
-Cela va créer des VMs qui seront supprimé à chaque fois quelles seront éteintes et basé sur la vm windows avec citrix qui vient d'être créer.
 
 
 
