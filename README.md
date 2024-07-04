@@ -135,7 +135,7 @@ Exécuter dans Dom0 :
 
 Normalement sys-net est recoit deja la connexion depuis ethernet, pour se connecter à l'aphp il faudra chaque jour ouvrir firefox et s'identifier (portail captif aphp).
 
-Pour sys-net-usb, il faut cliquer sur l'icone de réseau correspondant en dans la barre( en haut à droite par défaut)  > Wifi-Networks > connecter à un réseaux caché >  . Vous pouvez choisir d'enregistrer 
+Pour sys-net-usb, il faut cliquer sur l'icone de réseau correspondant en dans la barre( en haut à droite par défaut)  > Wifi-Networks . Vous pouvez choisir d'enregistrer 
 
 Il faudra choisir un vm connecter a ce réseau avec firefox pour s'identifier aussi (portail captif aphp).
 
