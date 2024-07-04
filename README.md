@@ -130,7 +130,13 @@ Exécuter dans Dom0 :
 	sudo qubesctl state.highstate	
 
 
+## Connexion Internet
 
+Normalement sys-net est recoit deja la connexion depuis ethernet, pour se connecter à l'aphp il faudra chaque jour ouvrir firefox et s'identifier (portail captif aphp).
+
+Pour sys-net-usb, il faut cliquer sur l'icone de réseau correspondant en dans la barre( en haut à droite par défaut)  > Wifi-Networks > connecter à un réseaux caché >  WF.PSL@066 et selectionner WPA personnel en securité. Vous pouvez choisir d'enregistrer le mot de passe pour tout le monde.
+
+Il faudra choisir un vm connecter a ce réseau avec firefox pour s'identifier aussi (portail captif aphp).
 
 
 ## Installation Windows
@@ -144,6 +150,8 @@ au niveau de la fenêtre autre sélectionner Boot qube depuis un CD-ROM > depuis
 selectionner l'ISO et cliquez sur OK.
 
 ![windows pram](https://github.com/clement6494/Salt-Lite/assets/94296944/367595c6-a7cc-4c40-9520-fe85645e4dac)
+
+Il faudra mettre les drivers à jours, pour que la webcam et le son fonctionnent correctement. Il suffit de taper drivers dans la barre de recherche windows et selectionner update drivers. 
 
 Ensuite, dans le terminal de dom0:
 
