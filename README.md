@@ -22,7 +22,7 @@ Ce guide a pour but de mettre en place une architecture simple de Qubes OS, perm
   - [Utilisation](#utilisation)
     - [Dom0](#dom0)
     - [Vm disposables](#vm-disposables)
-    - [Transfert de fichiers et copier/coller](#transfert-de-fichiers-et-copier/coller)
+    - [Transfert de fichiers et copier/coller](#transfert-de-fichiers-et-copiercoller)
   - [Mise en place](#mise-en-place)
     - [Projet](#projet)
     - [Création des VMs et politiques](#création-des-vms-et-politiques)
