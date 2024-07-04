@@ -18,7 +18,7 @@ Ce guide a pour but de mettre en place une architecture simple de Qubes OS, perm
 # Table des matières
     Qubes Lite v0.1	1
   - [Installation Qubes OS](#installation-qubes-os)
-    - [Connexion Internet](#connexion-internet)
+    - [demarrage sys-net](#demarrage-sys-net)
   - [Utilisation](#utilisation)
     - [Dom0](#dom0)
     - [Vm disposables](#vm-disposables)
@@ -26,6 +26,7 @@ Ce guide a pour but de mettre en place une architecture simple de Qubes OS, perm
   - [Mise en place](#mise-en-place)
     - [Projet](#projet)
     - [Création des VMs et politiques](#création-des-vms-et-politiques)
+    - [Connexion Internet](#connexion-internet)
     - [Installation Windows](#installation-windows)
     - [Installation Citrix Workspace](#installation-citrix-workspace)
 
@@ -59,7 +60,7 @@ Dans configuration principale, il est intéressant de cocher accepter automatiqu
 On peu aussi décocher le fait de créer une station de travail Whonix, nous n’en auront pas le besoin.
 Voilà c’est fini votre système est prêt à être installé.
 
-## connexion internet
+## demarrage sys-net
 Une fois la session ouverte si vous utilisez un Dell latitude 5440, sys-net n'arrivera pas à démarrer a cause d'un problème d'accès au module PCI 00_1f.6 (module gérant la prise ethernet)
 
 dans la console de dom0 (accessible dans le menu en faisant clic droit sur le bureau):
@@ -137,6 +138,7 @@ Normalement sys-net est recoit deja la connexion depuis ethernet, pour se connec
 Pour sys-net-usb, il faut cliquer sur l'icone de réseau correspondant en dans la barre( en haut à droite par défaut)  > Wifi-Networks > connecter à un réseaux caché >  WF.PSL@066 et selectionner WPA personnel en securité. Vous pouvez choisir d'enregistrer le mot de passe pour tout le monde.
 
 Il faudra choisir un vm connecter a ce réseau avec firefox pour s'identifier aussi (portail captif aphp).
+![wifi](https://github.com/clement6494/Salt-Lite/assets/94296944/14222b78-7612-438f-897f-1f4d6c5fa71e)
 
 
 ## Installation Windows
