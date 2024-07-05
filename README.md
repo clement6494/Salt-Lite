@@ -18,14 +18,15 @@ Ce guide a pour but de mettre en place une architecture simple de Qubes OS, perm
 # Table des matières
     Qubes Lite v0.1	1
   - [Installation Qubes OS](#installation-qubes-os)
-    - [Connexion Internet](#connexion-internet)
+    - [demarrage sys-net](#demarrage-sys-net)
   - [Utilisation](#utilisation)
     - [Dom0](#dom0)
     - [Vm disposables](#vm-disposables)
-    - [Transfert de fichiers et copier/coller](#transfert-de-fichiers-et-copier/coller)
+    - [Transfert de fichiers et copier/coller](#transfert-de-fichiers-et-copiercoller)
   - [Mise en place](#mise-en-place)
     - [Projet](#projet)
     - [Création des VMs et politiques](#création-des-vms-et-politiques)
+    - [Connexion Internet](#connexion-internet)
     - [Installation Windows](#installation-windows)
     - [Installation Citrix Workspace](#installation-citrix-workspace)
 
@@ -59,7 +60,7 @@ Dans configuration principale, il est intéressant de cocher accepter automatiqu
 On peu aussi décocher le fait de créer une station de travail Whonix, nous n’en auront pas le besoin.
 Voilà c’est fini votre système est prêt à être installé.
 
-## connexion internet
+## demarrage sys-net
 Une fois la session ouverte si vous utilisez un Dell latitude 5440, sys-net n'arrivera pas à démarrer a cause d'un problème d'accès au module PCI 00_1f.6 (module gérant la prise ethernet)
 
 dans la console de dom0 (accessible dans le menu en faisant clic droit sur le bureau):
@@ -97,12 +98,19 @@ Ensuite sélectionner la VM où transférer le texte (Ctrl+Shift+V par défaut) 
 Ensuite il faut simplement sélectionner le Qubes souhaité.
 Le fichier apparaîtra dans la VM de destination à l’emplacement : ~/QubesIncoming/[NomDuFichier]
 
+## attacher des périphériques à une vm
+
+selectionner le périphérique choisi et la vm voule et cliquer sur le "plus"
+il faudra répéter cette opération à chaque démarrage du qube.
+![atach webcam](https://github.com/clement6494/Salt-Lite/assets/94296944/cdac389f-f4c5-4c96-b2f8-1ec985fd879a)
+
 
 
 # Mise en place
 
 ## Projet
 
+![qubes setup lite v0 1](https://github.com/clement6494/Salt-Lite/assets/94296944/09d960c9-8bcc-4851-820c-caa71b037cd3)
 
  
 Schéma de l’architecture Qubes à mettre en place
@@ -113,7 +121,7 @@ Salt est un logiciel de management qui permets d’automatiser tout un tas d’a
 Qubes OS ne présente pas de dossier Salt utilisateur par default, il faut donc en créer un : 
 Exécuter dans Dom0 : qubesctl state.sls user-dir
  		
-Récupérer le dossier de config Salt : sur clé USB où sur GitHub depuis la VM personal pour ensuite le transférer  dans Dom0 :  cliquez ici pour savoir comment faire.
+Récupérer le dossier de config Salt : sur clé USB où sur GitHub depuis la VM personal pour ensuite [le transférer  dans Dom0](#transfert-de-fichiers-et-copiercoller) : 
 
 			
 Déplacer le dossier Salt-personal dans dom0 a l'addresse:
@@ -129,11 +137,18 @@ Exécuter dans Dom0 :
 	sudo qubesctl state.highstate	
 
 
+## Connexion Internet
+
+Normalement sys-net est recoit deja la connexion depuis ethernet, pour se connecter à l'aphp il faudra chaque jour ouvrir firefox et s'identifier (portail captif aphp).
+
+Pour sys-net-usb, il faut cliquer sur l'icone de réseau correspondant en dans la barre( en haut à droite par défaut)  > Wifi-Networks . Vous pouvez choisir d'enregistrer 
+
+Il faudra choisir un vm connecter a ce réseau avec firefox pour s'identifier aussi (portail captif aphp).
 
 
 
 ## Installation Windows
-Récupérer depuis la VM Personal, l’iso de Windows 10 : Windows 10 ISO
+Récupérer depuis la VM Personal, l’iso de Windows 10 : Windows 10 ISO https://www.microsoft.com/fr-fr/software-download/windows10ISO
 Dans le menu en haut à gauche dans VMs cliquez sur Windows puis Settings/Paramètres > avancé .
 
 dans la fenêtre Kernel, choisir (provided by qube)(current)
@@ -142,6 +157,15 @@ dans la fenêtre Kernel, choisir (provided by qube)(current)
 au niveau de la fenêtre autre sélectionner Boot qube depuis un CD-ROM > depuis fichier dans un qube > personal (vm ou est dl l'ISO) 
 selectionner l'ISO et cliquez sur OK.
 
+![windows pram](https://github.com/clement6494/Salt-Lite/assets/94296944/367595c6-a7cc-4c40-9520-fe85645e4dac)
+
+Il faudra mettre les drivers à jours, pour que la webcam et le son fonctionnent correctement. Il suffit de taper drivers dans la barre de recherche windows et selectionner update drivers. 
+
+Ensuite, dans le terminal de dom0:
+
+  	$  sudo qubesctl state.sls citrix saltenv=user
+
+Cela va créer des VMs qui seront supprimé à chaque fois quelles seront éteintes et basé sur la vm windows avec ses programmes déjà installés qui vient d'être créer.
 
 
 ## Installation Citrix Workspace
@@ -149,11 +173,7 @@ selectionner l'ISO et cliquez sur OK.
 Récupérer Citrix Workspace 2203 depuis le site officiel et l’installer manuellement en suivant les instructions. Attention les versions plus récentes de Citrix Workspace ne sont pas compatibles avec les veilles applications de l’aphp.
 citrix-workspace-app-for-linux
 
-Ensuite, dans le terminal de dom0:
-
-  $  sudo qubesctl state.sls citrix saltenv=user
-
-Cela va créer des VMs qui seront supprimé à chaque fois quelles seront éteintes et basé sur la vm windows avec citrix qui vient d'être créer.
+https://www.citrix.com/downloads/workspace-app/legacy-workspace-app-for-linux/workspace-app-for-linux-2203.html
 
 
 
