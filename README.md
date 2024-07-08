@@ -170,11 +170,7 @@ Cela va créer des VMs qui seront supprimé à chaque fois quelles seront étein
 
 ## Installation Citrix Workspace
 
-Récupérer Citrix Workspace 2203 depuis le site officiel et l’installer manuellement en suivant les instructions. Attention les versions plus récentes de Citrix Workspace ne sont pas compatibles avec les veilles applications de l’aphp.
-citrix-workspace-app-for-linux
-
-https://www.citrix.com/downloads/workspace-app/legacy-workspace-app-for-linux/workspace-app-for-linux-2203.html
-
+Citrix Workspace est installé automatiquement dans la VM citrix. Si l'insalation echoue vérifiez que la VM nommé citrix a bien accès à internet.
 
 
 
