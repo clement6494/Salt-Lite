@@ -161,14 +161,12 @@ selectionner l'ISO et cliquez sur OK.
 
 Il faudra mettre les drivers à jours, pour que la webcam et le son fonctionnent correctement. Il suffit de taper drivers dans la barre de recherche windows et selectionner update drivers. 
 
-Ensuite, dans le terminal de dom0:
+## Installation Citrix Workspace
+Dans le terminal de dom0:
 
   	$  sudo qubesctl state.sls citrix saltenv=user
 
 Cela va créer des VMs qui seront supprimé à chaque fois quelles seront éteintes et basé sur la vm windows avec ses programmes déjà installés qui vient d'être créer.
-
-
-## Installation Citrix Workspace
 
 Citrix Workspace est installé automatiquement dans la VM citrix. Si l'insalation echoue vérifiez que la VM nommé citrix a bien accès à internet.
 
