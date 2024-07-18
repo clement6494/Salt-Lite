@@ -110,7 +110,8 @@ il faudra répéter cette opération à chaque démarrage du qube.
 
 ## Projet
 
-![qubes setup lite v0 1](https://github.com/clement6494/Salt-Lite/assets/94296944/09d960c9-8bcc-4851-820c-caa71b037cd3)
+![image](https://github.com/user-attachments/assets/61c95fb7-6d33-4d21-8672-46fb62ba0023)
+
 
  
 Schéma de l’architecture Qubes à mettre en place
