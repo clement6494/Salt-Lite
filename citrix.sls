@@ -14,6 +14,11 @@ citrix--create-qube:
 
 {% elif grains['id'] == 'debian-11' %}
 
+citrix--add-firewall:
+  file.managed:
+    - name: /var/lib/qubes/appvms/citrix/firewall.xml
+    - source: salt://citrix/firewall.xml
+
 citrix-export-script:
   file.recurse:
     - name: ~/Documents/install-citrix-2203.sh
