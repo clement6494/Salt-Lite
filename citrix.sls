@@ -8,7 +8,9 @@ citrix--create-qube:
       - label: blue
       - flags:
         - disposable
-
+    - features:
+      - set:
+        - menu-items: firefox-esr.desktop selfservice.desktop thunar.desktop
 
 {% elif grains['id'] == 'debian-11' %}
 
