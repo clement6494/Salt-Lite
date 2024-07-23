@@ -118,12 +118,7 @@ echoFunc "Extracted URL part: $url2"
 url="https:${url2}"
 echoFunc "Latest version of the URL is: $url"
 
-# Extract URL part from HTML content
-url1="https:"
 
-
-# Construct the full URL
-url="${url1}${url2}"
 echoFunc "Latest version of the URL is: $url"
 debfile="citrix-workspace_${CRCurrVersNormalized}_amd64.deb"
 
