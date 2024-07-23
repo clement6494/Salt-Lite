@@ -20,7 +20,7 @@ citrix--add-firewall:
     - source: salt://citrix/firewall.xml
 
 citrix-export-script:
-  file.recurse:
+  file.managed:
     - name: ~/Documents/install-citrix-2203.sh
     - source: salt://script/install-citrix-2203.sh
     - clean: False
