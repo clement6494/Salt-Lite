@@ -1,0 +1,6 @@
+@tag:work   @default    ask
+@tag:work   @tag:work   allow
+@tag:work   @anyvm      deny
+@anyvm      @tag:work   deny
+@anyvm      vault       deny
+@anyvm      @anyvm      ask
