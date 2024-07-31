@@ -7,6 +7,7 @@ windows:
       - maxmem: 12000
       - qmemman: 1
       - qrexec_timeout: 7800
+      - tags: work
       - stubdom
     - flags:
       - HVM
