@@ -1,0 +1,4 @@
+@tag:admin	@tag:work		    allow
+@tag:work	@tag:admin		    deny
+@anyvm	  personal		      deny
+@anyvm	  @dispvm:personal	ask
