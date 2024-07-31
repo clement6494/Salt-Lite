@@ -1,6 +1,8 @@
-@tag:work   @default    ask
-@tag:work   @tag:work   allow
-@tag:work   @anyvm      deny
-@anyvm      @tag:work   deny
-@anyvm      vault       deny
-@anyvm      @anyvm      ask
+@tag:admin	@tag:work		        allow
+@tag:work   @dispvm:personal    allow
+@tag:work	  @tag:admin		      deny
+@tag:work   @tag:work           allow
+@tag:work   @anyvm              deny
+@anyvm      @tag:work           deny
+@anyvm      vault               deny
+@anyvm      @anyvm              ask
